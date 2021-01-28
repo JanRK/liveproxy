@@ -1,5 +1,5 @@
 FROM python:3-alpine AS compile-image
-RUN apk add build-base
+RUN apk add build-base git
 
 RUN addgroup -S liveproxy && adduser -S liveproxy -G liveproxy
 USER liveproxy
