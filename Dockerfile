@@ -4,7 +4,7 @@ RUN apk add build-base
 RUN addgroup -S liveproxy && adduser -S liveproxy -G liveproxy
 USER liveproxy
 
-RUN pip install --user --no-cache-dir --no-warn-script-location liveproxy
+RUN pip install --user --no-cache-dir --no-warn-script-location --upgrade git+https://github.com/back-to/liveproxy.git
 
 
 FROM python:3-alpine AS runtime-image
